@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style>
+			/* Стили для размещения окна ввода и кнопки рядом */
+			.form-wrapper {
+				display: flex;
+				align-items: center;
+				max-width: 800px; /* Ограничиваем максимальную ширину формы */
+				margin: 0 auto; /* Центрируем форму по горизонтали */
+			}
+			#query {
+				flex: 1;
+				margin-right: 10px;
+			}
+			#submitButton {
+				flex: 0;
+			}
+		</style>
+	</head>
+	<body class="subpage">
+
+		<div class="form-wrapper">
+			<form method="post" action="#">
+				<div class="row uniform">
+					<div class="9u 12u$(small)">
+						<input type="text" name="query" id="query" value="" placeholder="Введите слово" />
+					</div>
+					<div class="3u$ 12u$(small)">
+						<input type="submit" value="Поиск" id="submitButton" class="fit" />
+					</div>
+				</div>
+			</form>
+		</div>
+
+		{{ map_html|safe }}
+
+
+
+
+	</body>
+</html>
